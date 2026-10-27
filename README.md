@@ -30,9 +30,9 @@ El pipeline de datos incluye las siguientes transformaciones principales:
 1. **Selección Ampliada de Variables:**
    * Inclusión de indicadores demográficos, crediticios e institucionales (`ORGANIZATION_TYPE`, `DAYS_REGISTRATION`, `DAYS_ID_PUBLISH`, `CODE_GENDER`, `CNT_CHILDREN`).
 2. **Ingeniería de Ratios Financieros (*Feature Engineering*):**
-   * **`PAYMENT_RATE`**: $\frac{\text{AMT\_ANNUITY}}{\text{AMT\_CREDIT}}$ (Proporción anual del crédito total).
-   * **`INCOME_CREDIT_PERC`**: $\frac{\text{AMT\_INCOME\_TOTAL}}{\text{AMT\_CREDIT}}$ (Años de ingreso para cubrir la deuda).
-   * **`ANNUITY_INCOME_PERC`**: $\frac{\text{AMT\_ANNUITY}}{\text{AMT\_INCOME\_TOTAL}}$ (Compromiso del ingreso anual en la cuota).
+   * **`PAYMENT_RATE`**: `AMT_ANNUITY` / `AMT_CREDIT` (Proporción anual del crédito total).
+   * **`INCOME_CREDIT_PERC`**: `AMT_INCOME_TOTAL` / `AMT_CREDIT` (Años de ingreso para cubrir la deuda).
+   * **`ANNUITY_INCOME_PERC`**: `AMT_ANNUITY` / `AMT_INCOME_TOTAL` (Compromiso del ingreso anual en la cuota).
    * **`EXT_SOURCE_MEAN`**: Promedio ponderado de puntuaciones externas (`EXT_SOURCE_2` y `EXT_SOURCE_3`).
    * **`INCOME_PER_PERSON`**: Ingreso disponible ajustado por tamaño familiar.
 3. **Limpieza e Imputación:**
